@@ -1,6 +1,17 @@
 import type { AstroComponentFactory } from 'astro/runtime/server/index.js';
 import type { HTMLAttributes, ImageMetadata } from 'astro/types';
 
+export interface WhispersHero extends Widget {
+  title: string;
+  subtitle: string;
+  ctaLabel: string;
+}
+
+export interface TheStory extends Widget {
+  title: string;
+  subtitle: string;
+}
+
 export interface Post {
   /** A unique ID number that identifies a post. */
   id: string;

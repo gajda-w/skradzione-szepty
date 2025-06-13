@@ -4,7 +4,7 @@ import type { TheStory as Props } from '~/types';
 
 const {
   title = await Astro.slots.render('title'),
-  subtitle = await Astro.slots.render('subtitle'),
+  // subtitle = await Astro.slots.render('subtitle'),
 
   id,
   isDark = false,
@@ -13,31 +13,47 @@ const {
 } = Astro.props;
 ---
 
-<section id="about" class="relative py-20 bg-[#0a0f0d]">
+<section id='about' class='relative py-20 bg-[#0a0f0d]'>
   <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-5xl ${classes?.container ?? ''}`} bg={bg}>
-    <div class="container mx-auto px-4">
-      <div class="max-w-4xl mx-auto">
-        <h3 class="text-3xl font-serif mb-8 text-center">{title}</h3>
-        <p class="text-lg leading-relaxed mb-6 text-gray-300">
-          {subtitle}
+    <div class='container mx-auto px-4'>
+      <div class='max-w-4xl mx-auto'>
+        <h3 class='text-3xl font-serif mb-8 text-center'>{title}</h3>
+        <p class='text-lg leading-relaxed mb-6 text-gray-300'>
+          <!-- {subtitle} -->
+
+          Zorya Frostvale, tłumaczka starożytnych ksiąg, wiedzie spokojne życie w Nowym Świecie. Jej codzienność
+          wypełnia szelest papieru i zapach wiekowych tomów... aż do dnia, gdy podczas spaceru po lesie znajduje
+          medalion, który zaczyna szeptać jej imię.
         </p>
-        <div class="grid md:grid-cols-3 gap-8 mt-12">
-          <div class="bg-[#131a16] p-6 rounded-lg transform hover:scale-105 transition-transform">
-            <h4 class="text-xl font-serif mb-4 text-emerald-400">Ancient Magic</h4>
-            <p class="text-gray-400">
-              Discover a complex system of nature-based magic, where every spell is tied to the ancient forests.
+        <p class='text-lg leading-relaxed mb-6 text-gray-300'>
+          W jego wnętrzu ukryty jest Nyxander, mężczyzna z innego świata, błagający o pomoc w ocaleniu królestwa
+          Lunirii. Za jego namową Zorya wyrusza do Obozu Łowców w niezwykłym Elderheim, gdzie odkrywa swoje dziedzictwo:
+          moc empatii, zdolność czytania myśli i współodczuwania z istotami magicznymi. Dar, który może odmienić los
+          całej krainy… lub stać się przekleństwem, wystawiającym ją na śmiertelne niebezpieczeństwo.
+        </p>
+        <p class='text-lg leading-relaxed mb-6 text-gray-300'>
+          Sekrety starożytnego rodu czarownic, zakazane sojusze i prawda o medalionie wkrótce wyjdą na jaw. Zorya trafi
+          w sam środek gry, w której nikt nie rozdaje kart uczciwie… i trudno przewidzieć wynik tej partii.
+        </p>
+        <div class='grid md:grid-cols-3 gap-8 mt-12'>
+          <div class='bg-[#131a16] p-6 rounded-lg transform hover:scale-105 transition-transform'>
+            <h4 class='text-xl font-serif mb-4 text-emerald-400'>Ukryty świat</h4>
+            <p class='text-gray-400'>
+              Zanurz się w miejscu, gdzie szept lasu i starożytne czary tworzą rzeczywistość inną od tej, którą znasz.
             </p>
           </div>
-          <div class="bg-[#131a16] p-6 rounded-lg transform hover:scale-105 transition-transform">
-            <h4 class="text-xl font-serif mb-4 text-emerald-400">Dark Mystery</h4>
-            <p class="text-gray-400">
-              Unravel the secrets of the Grove's past as you follow Aria's journey into its depths.
+          <div class='bg-[#131a16] p-6 rounded-lg transform hover:scale-105 transition-transform'>
+            <h4 class='text-xl font-serif mb-4 text-emerald-400'>Tajemnicza magia</h4>
+            <p class='text-gray-400'>
+              Odkryj magię, o której nie wolno mówić: związaną z umysłem i emocjami. Czy dar empatii to błogosławieństwo
+              czy przekleństwo?
             </p>
           </div>
-          <div class="bg-[#131a16] p-6 rounded-lg transform hover:scale-105 transition-transform">
-            <h4 class="text-xl font-serif mb-4 text-emerald-400">Hidden World</h4>
-            <p class="text-gray-400">
-              Experience a richly detailed world where nature and magic intertwine in unexpected ways.
+          <div class='bg-[#131a16] p-6 rounded-lg transform hover:scale-105 transition-transform'>
+            <h4 class='text-xl font-serif mb-4 text-emerald-400'>Zakazana miłość</h4>
+            <p class='text-gray-400'>
+              Napięcie między sercem a rozsądkiem, zaufaniem a lękiem. Relacje pełne niedopowiedzeń, sekretów i
+              niebezpiecznych wyborów.
             </p>
           </div>
         </div>

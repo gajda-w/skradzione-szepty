@@ -7,6 +7,7 @@ const {
   title = await Astro.slots.render('title'),
   subtitle = await Astro.slots.render('subtitle'),
   ctaLabel = await Astro.slots.render('ctaLabel'),
+  subheader = await Astro.slots.render('subheader'),
 
   id,
   isDark = false,
@@ -15,30 +16,33 @@ const {
 } = Astro.props;
 ---
 
-<section class="relative min-h-screen flex items-center justify-center">
+<section class='relative min-h-screen flex items-center justify-center'>
   <div
     class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1511497584788-876760111969')] bg-cover bg-center"
   >
   </div>
 
-  <div class="absolute inset-0 bg-gradient-to-b from-[#0a0f0d]/70 to-[#0a0f0d]"></div>
+  <div class='absolute inset-0 bg-gradient-to-b from-[#0a0f0d]/70 to-[#0a0f0d]'></div>
   <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-5xl ${classes?.container ?? ''}`} bg={bg}>
-    <div class="relative container mx-auto px-4 flex flex-col items-center text-center">
-      <h2 class="text-5xl md:text-7xl font-serif mb-6 animate-fade-in">{title}</h2>
-      <p class="text-xl md:text-2xl text-emerald-400 mb-8 max-w-2xl animate-fade-in-delay">
+    <div class='relative container mx-auto px-4 flex flex-col items-center text-center'>
+      <h2 class='text-5xl md:text-7xl font-serif mb-6 animate-fade-in'>{title}</h2>
+      <h4 class='text-5xl md:text-2xl font-serif mb-6 animate-fade-in'>{subheader}</h4>
+      <p class='text-xl md:text-2xl text-emerald-400 mb-8 max-w-2xl animate-fade-in-delay'>
         {subtitle}
       </p>
-      <button
-        class="bg-emerald-700 hover:bg-emerald-600 text-white px-8 py-4 rounded-full text-lg transition-all transform hover:scale-105 flex items-center space-x-2 animate-fade-in-delay-2"
+      <a
+        target='_blank'
+        href='https://www.gandalf.com.pl/b/skradzione-szepty-wezwana/'
+        class='bg-emerald-700 hover:bg-emerald-600 text-white px-8 py-4 rounded-full text-lg transition-all transform hover:scale-105 flex items-center space-x-2 animate-fade-in-delay-2'
       >
-        <Icon name="tabler:book" />
+        <Icon name='tabler:book' />
         <span>{ctaLabel}</span>
-      </button>
+      </a>
     </div>
   </WidgetWrapper>
 
   <Icon
-    name="tabler:chevron-down"
-    class="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-8 h-8 animate-bounce text-emerald-400"
+    name='tabler:chevron-down'
+    class='absolute bottom-8 left-1/2 transform -translate-x-1/2 w-8 h-8 animate-bounce text-emerald-400'
   />
 </section>

@@ -5,6 +5,7 @@ export interface WhispersHero extends Widget {
   title: string;
   subtitle: string;
   ctaLabel: string;
+  subheader?: string;
 }
 
 export interface TheStory extends Widget {

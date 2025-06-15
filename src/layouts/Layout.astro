@@ -39,6 +39,11 @@ const { language, textDirection } = I18N;
     <!-- Comment the line below to disable View Transitions -->
     <ViewTransitions fallback='swap' />
     <meta name='google-site-verification' content='v8nCMDuL3CCy-rRxk17ao3J4GiT7pVcEIFS2sHcd5QU' />
+
+    <title>{metadata.title}</title>
+    <meta name='description' content={metadata.description} />
+
+    <!-- Open Graph (Facebook, Messenger itd.) -->
   </head>
 
   <body class='antialiased text-default bg-page tracking-tight'>

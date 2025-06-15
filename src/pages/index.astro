@@ -6,8 +6,28 @@ import ExceptSection from '~/components/widgets/ExceptSection.astro';
 import { Icon } from 'astro-icon/components';
 
 const metadata = {
-  title: 'Skradzione szepty',
+  title: 'Skradzione szepty: Wezwana - KT. Writz',
+  description:
+    'Gdy raz usłyszysz szept magii, nie wrócisz do zwyczajności. Odkryj "Skradzione szepty" - powieść romantasy, która zostanie z Tobą na długo. Już w przedsprzedaży.',
   ignoreTitleTemplate: true,
+  openGraph: {
+    url: 'https://ktwritz.com',
+    siteName: 'Skradzione szepty',
+    type: 'website',
+    locale: 'pl_PL',
+    images: [
+      {
+        url: 'https://ktwritz.com/images/opengraph-image.webp',
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    handle: '@kt_writz',
+    site: '@kt_writz',
+    cardType: 'summary_large_image',
+  },
 };
 ---
 

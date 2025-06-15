@@ -3,6 +3,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import HeroWhispers from '~/components/widgets/HeroWhispers.astro';
 import TheStory from '~/components/widgets/TheStory.astro';
 import ExceptSection from '~/components/widgets/ExceptSection.astro';
+import { Icon } from 'astro-icon/components';
 
 const metadata = {
   title: 'Skradzione szepty',
@@ -42,14 +43,14 @@ const metadata = {
             stawiając na opowieści z nutą magii i wyrazistymi bohaterami.
           </p>
           <div class='flex space-x-4'>
-            <a href='#' class='text-gray-400 hover:text-emerald-400 transition-colors'>
-              <!-- <Twitter class="w-6 h-6" /> -->
-            </a>
-            <a href='#' class='text-gray-400 hover:text-emerald-400 transition-colors'>
-              <!-- <Instagram class="w-6 h-6" /> -->
-            </a>
-            <a href='#' class='text-gray-400 hover:text-emerald-400 transition-colors'>
-              <!-- <Facebook class="w-6 h-6" /> -->
+            <a
+              href='https://www.instagram.com/kt_writz'
+              target='_blank'
+              rel='noopener noreferrer'
+              class='text-gray-400 hover:text-emerald-400 transition-colors flex gap-2'
+            >
+              <Icon name='tabler:brand-instagram' class='w-6 h-6' />
+              kt_writz
             </a>
           </div>
         </div>
@@ -57,45 +58,37 @@ const metadata = {
     </div>
   </section>
 
-  {/* Reviews Section */}
-  <!-- <section id="reviews" class="relative py-20">
-    <div
-      class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1516214104703-d870798883c5')] bg-cover bg-center opacity-20"
-    >
-    </div>
-    <div class="relative container mx-auto px-4">
-      <h3 class="text-3xl font-serif mb-12 text-center">Reader Reviews</h3>
-      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+  <section id='media-patrons' class='relative py-20 bg-[#0a0f0d]'>
+    <div class='container mx-auto px-4'>
+      <h3 class='text-3xl font-serif text-center mb-12'>Patronat medialny</h3>
+      <div class='flex flex-wrap justify-center gap-8'>
         {
           [
+            { name: 'Adriannas books', avatar: '/images/patrons/adriannas-books.webp', instagram: 'adriannas.books' },
+            { name: 'Allison czyta', avatar: '/images/patrons/alison-czyta.webp', instagram: 'allison.czyta' },
+            { name: 'Jillian from Velaris', avatar: '/images/patrons/julian.webp', instagram: 'jillian_from_velaris' },
             {
-              text: "A masterpiece of modern fantasy. The world-building is intricate and the magic system is unlike anything I've encountered before.",
-              author: 'Fantasy Book Review',
-              rating: 5,
+              name: 'Literacko zaczytana',
+              avatar: '/images/patrons/literacko-zaczytane.webp',
+              instagram: 'literackozaczytana',
             },
-            {
-              text: "Nightshade's prose is as enchanting as the magical forest she describes. A must-read for anyone who loves deep, atmospheric fantasy.",
-              author: 'The Literary Observer',
-              rating: 5,
-            },
-          ].map((review, index) => (
-            <div key={index} class="bg-[#131a16]/90 p-6 rounded-lg backdrop-blur-sm">
-              <div class="flex mb-4">
-                {[...Array(review.rating)].map((_, i) => (
-                  <Star key={i} class="w-5 h-5 text-emerald-400 fill-current" />
-                ))}
+            { name: 'Rinn books', avatar: '/images/patrons/rinnbooks.webp', instagram: 'rinnbooks_' },
+            { name: 'Suzan with books', avatar: '/images/patrons/suzan-with-books.webp', instagram: 'suzanwithbooks' },
+          ].map((patron) => (
+            <a
+              href={`https://www.instagram.com/${patron.instagram}`}
+              target='_blank'
+              class='flex flex-col items-center space-y-4 max-w-[100px] text-center'
+            >
+              <div class='w-16 h-16 rounded-full overflow-hidden border-2 border-emerald-400'>
+                <img src={patron.avatar} alt={patron.name} class='w-full h-full object-cover' />
               </div>
-              <Quote class="w-8 h-8 text-emerald-400 mb-4" />
-              <p class="text-gray-300 mb-4">{review.text}</p>
-              <p class="text-emerald-400 font-serif">{review.author}</p>
-            </div>
+            </a>
           ))
         }
       </div>
     </div>
-  </section> -->
-
-  {/* Footer */}
+  </section>
   <footer class='bg-[#070b09] py-12'>
     <div class='container mx-auto px-4 text-center'>
       <p class='text-gray-500 mb-4'>© 2025 K.T. Writz. All rights reserved.</p>

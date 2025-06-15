@@ -26,7 +26,7 @@ const { language, textDirection } = I18N;
 ---
 
 <!doctype html>
-<html lang={language} dir={textDirection} class="2xl:text-[20px]">
+<html lang={language} dir={textDirection} class='2xl:text-[20px]'>
   <head>
     <CommonMeta />
     <Favicons />
@@ -37,10 +37,11 @@ const { language, textDirection } = I18N;
     <Analytics />
 
     <!-- Comment the line below to disable View Transitions -->
-    <ViewTransitions fallback="swap" />
+    <ViewTransitions fallback='swap' />
+    <meta name='google-site-verification' content='v8nCMDuL3CCy-rRxk17ao3J4GiT7pVcEIFS2sHcd5QU' />
   </head>
 
-  <body class="antialiased text-default bg-page tracking-tight">
+  <body class='antialiased text-default bg-page tracking-tight'>
     <slot />
 
     <BasicScripts />

@@ -23,7 +23,8 @@ const {
   </div>
 
   <div class='absolute inset-0 bg-gradient-to-b from-[#0a0f0d]/70 to-[#0a0f0d]'></div>
-  <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-5xl ${classes?.container ?? ''}`} bg={bg}>
+  <!-- TODO: na razie isDark ustawiłem na true bo na tej stronie nie ma dark mode i aby u wszystkich wyświetlało się jednakowo -->
+  <WidgetWrapper id={id} isDark={true} containerClass={`max-w-5xl ${classes?.container ?? ''}`} bg={bg}>
     <div class='relative container mx-auto px-4 flex flex-col items-center text-center'>
       <h2 class='text-5xl md:text-7xl mb-6 animate-fade-in font-tangerine'>{title}</h2>
       <h4 class='text-xl md:text-2xl font-serif mb-6 animate-fade-in'>{subheader}</h4>
